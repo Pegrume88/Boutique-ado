@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
 
 from .forms import OrderForm
@@ -16,4 +16,4 @@ def checkout(request):
         'order_form': order_form,
     }
 
-    return render(request, templat, context)
+    return render(request, template, context)

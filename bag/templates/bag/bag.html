@@ -2,7 +2,6 @@
 {% load static %}
 {% load bag_tools %}
 
-
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -87,7 +86,6 @@
                                     <td class="py-3">
                                         <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
                                     </td>
-
                                 </tr>
                             {% endfor %}
                             <tr>
@@ -110,7 +108,7 @@
                                         </span>
                                         <span class="text-uppercase">Keep Shopping</span>
                                     </a>
-                                    <a href="" class="btn btn-black rounded-0 btn-lg">
+                                    <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
                                         <span class="text-uppercase">Secure Checkout</span>
                                         <span class="icon">
                                             <i class="fas fa-lock"></i>
